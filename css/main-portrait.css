@@ -1,0 +1,61 @@
+.header {
+    padding: 0 5rem !important;
+    height: 18rem !important;
+}
+
+.logo {
+    width: 34rem !important;
+    height: auto !important;
+}
+
+.header-background {
+    height: 45.6rem !important;
+}
+
+.block-about {
+    height: calc(100% - 18rem) !important;
+}
+
+.block-about .text {
+    width: 80% !important;
+    margin: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 57%;
+    transform: translateY(-50%);
+}
+
+.table {
+    margin: 0 5rem !important;
+}
+
+.cell {
+    width: 50% !important;
+}
+
+.footer {
+    margin: 0 5rem !important;
+}
+
+.liquid-img {
+    height: 50%;
+    margin: auto 0;
+    bottom: 0;
+    top: 0;
+}
+
+.block-lemon .text {
+    left: 5rem;
+}
+
+.block-peach .text {
+    right: 5rem;
+}
+
+.block-pineapple .text {
+    left: 5rem;
+}
+
+.footer-logos {
+    display: none;
+}

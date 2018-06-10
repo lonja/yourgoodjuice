@@ -1,0 +1,310 @@
+@font-face {
+    font-family: "Proxima Nova Extrabold";
+    src: url("../fonts/Proxima Nova Extrabold.otf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Black";
+    src: url("../fonts/Proxima Nova Black.otf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Thin";
+    src: url("../fonts/Proxima Nova Thin.otf");
+}
+
+html, body {
+    font-family: "Proxima Nova Extrabold", sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    height: 21.6rem;
+    width: 100%;
+    font-family: "Proxima Nova Black", sans-serif;
+    font-size: 1.6rem;
+    overflow-y: visible;
+}
+
+header .logo {
+    height: auto;
+    width: 71.5rem;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 17%;
+    display: inline-block;
+    font-family: "Proxima Nova Thin", sans-serif;
+}
+
+div {
+    text-transform: uppercase;
+}
+
+a {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
+
+.color-block-header {
+    color: #cc6666;
+}
+
+.color-block-description-dark {
+    color: #31152d;
+}
+
+.color-block-description-light {
+    color: #ffffff;
+}
+
+.color-background-light {
+    background: #f7e39d;
+}
+
+.color-background-dark {
+    background: linear-gradient(to top right, #32113f, #56267d);
+}
+
+.header {
+    padding: 0 18rem;
+    height: 21.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 500;
+}
+
+.header-background {
+    position: absolute;
+    height: 54.6rem;
+    width: 100%;
+    overflow-y: visible;
+    background: url("http://localhost:63343/yourgoodjuice/img/header-background.svg") no-repeat !important;
+    background-size: 100% 100%;
+    z-index: 5;
+}
+
+.block {
+    position: relative;
+    height: 100%;
+}
+
+.block-header {
+    font-family: "Proxima Nova Extrabold", sans-serif;
+    font-size: 7rem;
+}
+
+.block-description {
+    font-size: 4.2rem;
+    margin-top: 1.6rem;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.logo {
+    text-transform: capitalize;
+}
+
+.block-about {
+    height: calc(100% - 21.6rem);
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.block-about .text {
+    display: inline-block;
+    bottom: 7.2rem;
+    top: unset;
+    width: 141.4rem;
+    transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.block-peach {
+    background: #f7e39d url("http://localhost:63343/yourgoodjuice/img/peach-background.svg") no-repeat left;
+    background-size: auto 100%;
+}
+
+.block-peach img {
+    left: 0;
+}
+
+.block-peach .text {
+    right: 10%;
+    text-align: right;
+}
+
+.block-pineapple {
+    background: url("http://localhost:63343/yourgoodjuice/img/pineapple-background.svg") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
+    background-size: auto 100%;
+}
+
+.block-pineapple img {
+    right: 0;
+}
+
+.block-pineapple .text {
+    left: 10%;
+    text-align: left;
+}
+
+.block-lemon {
+    background: url("http://localhost:63343/yourgoodjuice/img/lemon-background.svg") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
+    background-size: auto 100%;
+}
+
+.block-lemon img {
+    right: 0;
+}
+
+.block-lemon .text {
+    left: 10%;
+    text-align: left;
+}
+
+.language-switch {
+    position: absolute;
+    right: 0;
+}
+
+.block-work-with-us {
+    height: 83%;
+    text-align: center;
+}
+
+.block-work-with-us .block-header {
+    padding-top: 5rem;
+}
+
+.icon-wrapper {
+    height: 9.8rem;
+    width: 9.8rem;
+    margin: auto;
+}
+
+.work-with-us-icon {
+    height: auto;
+    width: 9.8rem;
+    margin: auto;
+}
+
+.work-with-us-icon-vertical {
+    height: 9.8rem;
+    width: auto;
+    margin: auto;
+}
+
+.description {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.table {
+    margin: 0 18rem;
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.row {
+    display: table-row;
+    justify-content: space-between;
+}
+
+.cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 25%;
+    overflow: hidden;
+    padding: 4rem;
+    list-style: none;
+}
+
+.header-inline {
+    display: inline-block;
+}
+
+.footer-inline {
+    display: inline-block;
+}
+
+.text {
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.liquid-img {
+    height: 100%;
+    position: absolute;
+}
+
+.footer {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 18rem;
+    font-size: 3.2rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    height: auto;
+    width: 41.5rem;
+    display: block;
+}
+
+.footer-cooked {
+    height: auto;
+    width: 17rem;
+    display: block;
+}
+
+.footer-icon {
+    height: 7.4rem;
+    width: 7.4rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+}

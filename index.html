@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Good Juice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (orientation: portrait)" href="css/main-portrait.css">
+    <link rel="stylesheet" media="screen and (max-width: 1920px) and (orientation: landscape)" href="css/1080p.css">
+    <link rel="stylesheet" media="screen and (max-width: 1080px) and (orientation: portrait)" href="css/1080p.css">
+    <link rel="stylesheet" media="screen and (max-width: 568px) and (orientation: landscape)" href="css/320p.css">
+    <link rel="stylesheet" media="screen and (max-width: 320px) and (orientation: portrait)" href="css/320p.css">
+    <link rel="stylesheet" media="screen and (max-width: 667px) and (orientation: landscape)" href="css/375p.css">
+    <link rel="stylesheet" media="screen and (max-width: 375px) and (orientation: portrait)" href="css/375p.css">
+    <link rel="stylesheet" media="screen and (max-width: 736px) and (orientation: landscape)" href="css/414p.css">
+    <link rel="stylesheet" media="screen and (max-width: 414px) and (orientation: portrait)" href="css/414p.css">
+    <link rel="stylesheet" media="screen and (max-width: 800px) and (orientation: landscape)" href="css/600p.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px) and (orientation: portrait)" href="css/600p.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px) and (orientation: landscape)" href="css/720p.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px) and (orientation: portrait)" href="css/720p.css">
+    <link rel="stylesheet" media="screen and (max-width: 1366px) and (orientation: landscape)" href="css/800p.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<script>
+    var $root = $('html, body');
+
+    $('a[href^="#"]').click(function () {
+        var href = $.attr(this, 'href');
+
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 500, function () {
+            window.location.hash = href;
+        });
+
+        return false;
+    });
+
+    // function smoothScroll(event) {
+    //     event.preventDefault();
+    //     $root.animate({
+    //         scrollTop: $(event.target.getAttribute('href')).offset().top
+    //     }, 500);
+    //     return false;
+    // }
+
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     console.log('ебал твой рот');
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
+</script>
+
+<body>
+<header class="color-background-light color-block-description-light">
+    <div class="header-background">
+        <div class="header">
+            <img class="logo" src="http://localhost:63343/yourgoodjuice/img/logo.svg"/>
+            <a href="#liquids">Жидкости</a>
+            <a href="#workwithus">Работа с нами</a>
+            <a href="#contacts">Контакты</a>
+            <!--<a class="language-switch" onclick="smoothScroll(event)">RU</a>-->
+        </div>
+    </div>
+</header>
+<div class="block block-about color-background-light">
+    <div class="text">
+        <div class="block-header color-block-header">
+            О нас
+        </div>
+        <div class="block-description color-block-description-dark">
+            Имея большой опыт в качестве потребителя в vape индустрии, нами была создана компания под названием Your
+            Good
+            Juice, с главной целью предоставления качественной и вкусной продукции для украинского рынка.
+        </div>
+    </div>
+</div>
+<div id="liquids" class="block block-pineapple color-background-dark">
+    <div class="text inline">
+        <div class="block-header color-block-header">
+            Pineapple Milkshake
+        </div>
+        <div class="block-description color-block-description-light">
+            Вкус молочного коктейля с подтаявшим мороженым и ломтиками ананаса. О нём не стоит говорить - его стоит
+            просто поробовать!
+        </div>
+    </div>
+    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/pineapple-bottle.png">
+</div>
+<div class="block block-peach color-background-light">
+    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/peach-bottle.png">
+    <div class="text inline">
+        <div class="block-header color-block-header">
+            Peach Milkshake
+        </div>
+        <div class="block-description color-block-description-dark">
+            Отличное сочетание сочного персика с молоком не оставит равнодушным любителей сладких коктейлей.
+        </div>
+    </div>
+</div>
+<div class="block block-lemon color-background-dark">
+    <div class="text inline">
+        <div class="block-header color-block-header">
+            Lemon Milkshake
+        </div>
+        <div class="block-description color-block-description-light">
+            Молочный коктейль, напоминающий лимонный щербет с кислинкой на послевкусие. Незаменимый вкус для ежедневного
+            парения.
+        </div>
+    </div>
+    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/lemon-bottle.png">
+</div>
+<div id="workwithus" class="block block-work-with-us color-background-light">
+    <div class="block-header color-block-header">
+        Преимущества работы с нами:
+    </div>
+    <div class="table">
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/sale.svg"/>
+            </div>
+            <div class="description">
+                Скидка на превый заказ
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/delivery.svg"/>
+            </div>
+            <div class="description">
+                Бесплатная доставка
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/map.svg"/>
+            </div>
+            <div class="description">
+                Предоставление карты вкусов
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/bottles.svg"/>
+            </div>
+            <div class="description">
+                Бесплатные пробники
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/message.png"/>
+            </div>
+            <div class="description">
+                Общение с нами в любом удобном мессенджере
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon-vertical" src="http://localhost:63343/yourgoodjuice/img/person.svg"/>
+            </div>
+            <div class="description">
+                Прислушиваемся к вашим отзывам
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/question.png"/>
+            </div>
+            <div class="description">
+                Быстрые ответы на ваши вопросы
+            </div>
+        </div>
+        <div class="cell">
+            <div class="icon-wrapper">
+                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/content.svg"/>
+            </div>
+            <div class="description">
+                Предоставление контента на вашу платформу продаж
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="contacts" class="color-background-dark color-block-description-light">
+    <div class="footer">
+        <div class="footer-inline footer-logos">
+            <img class="footer-logo" src="http://localhost:63343/yourgoodjuice/img/logo.svg">
+            <img class="footer-cooked" src="http://localhost:63343/yourgoodjuice/img/cooked.svg">
+        </div>
+        <div class="footer-inline">
+            <div class="footer-social">
+                <a href="https://vk.com/yourgoodjuice" class="footer-inline">
+                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/vk.svg">
+                </a>
+                <a href="https://t.me/yourgoodjuice" class="footer-inline">
+                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/telegram.svg">
+                </a>
+                <a href="https://instagram.com/yourgoodjuice" class="footer-inline">
+                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/instagram.svg">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:yourgoodjuice@gmail.com">yourgoodjuice@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-inline">
+            <div>
+                <a href="tel:+380(73)342-42-02">+380(73)342-42-02</a> &#8212; Антон
+            </div>
+            <div>
+                <a href="tel:+380(96)342-42-02">+380(96)342-42-02</a> &#8212; Денис
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
