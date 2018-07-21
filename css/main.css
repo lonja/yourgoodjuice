@@ -98,17 +98,20 @@ a:active {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 500;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 .header-background {
     position: absolute;
-    height: 54.6rem;
+    height: 55rem;
     width: 100%;
     overflow-y: visible;
-    background: url("http://localhost:63343/yourgoodjuice/img/header-background.svg") no-repeat !important;
+    background: url("../img/header-background.svg") no-repeat !important;
     background-size: 100% 100%;
-    z-index: 5;
+    z-index: 1;
 }
 
 .block {
@@ -118,11 +121,15 @@ a:active {
 
 .block-header {
     font-family: "Proxima Nova Extrabold", sans-serif;
-    font-size: 7rem;
+    font-size: 8.6rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
 }
 
 .block-description {
     font-size: 4.2rem;
+    line-height: 4.8rem;
     margin-top: 1.6rem;
 }
 
@@ -153,7 +160,7 @@ a:active {
 }
 
 .block-peach {
-    background: #f7e39d url("http://localhost:63343/yourgoodjuice/img/peach-background.svg") no-repeat left;
+    background: #f7e39d url("../img/peach-background.png") no-repeat left;
     background-size: auto 100%;
 }
 
@@ -167,7 +174,7 @@ a:active {
 }
 
 .block-pineapple {
-    background: url("http://localhost:63343/yourgoodjuice/img/pineapple-background.svg") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
+    background: url("../img/pineapple-background.png") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
     background-size: auto 100%;
 }
 
@@ -181,7 +188,7 @@ a:active {
 }
 
 .block-lemon {
-    background: url("http://localhost:63343/yourgoodjuice/img/lemon-background.svg") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
+    background: url("../img/lemon-background.png") no-repeat right, linear-gradient(to top right, #32113f, #56267d);
     background-size: auto 100%;
 }
 
@@ -227,9 +234,14 @@ a:active {
 }
 
 .description {
-    margin-top: 4rem;
+    margin-top: 4.4rem;
     text-align: center;
     font-size: 2.4rem;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
 }
 
 .table {
@@ -307,4 +319,173 @@ a:active {
 .footer-social {
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (min-width: 310px) and (orientation: portrait) {
+    html {
+        font-size: 3px;
+    }
+}
+
+@media only screen and (min-width: 370px) and (orientation: portrait) {
+    html {
+        font-size: 3.5px;
+    }
+}
+
+@media only screen and (min-width: 410px) and (orientation: portrait) {
+    html {
+        font-size: 3.8px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (orientation: portrait) {
+    html {
+        font-size: 4.5px;
+    }
+}
+
+@media only screen and (min-width: 760px) and (orientation: portrait) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media only screen and (min-width: 990px) and (orientation: portrait) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (min-width: 1380px) and (orientation: portrait) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (orientation: portrait) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (min-width: 1920px) and (orientation: portrait) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 560px) and (orientation: landscape) {
+    html {
+        font-size: 3px;
+    }
+
+    .header-background {
+        height: 80rem;
+    }
+}
+
+@media only screen and (min-width: 660px) and (orientation: landscape) {
+    html {
+        font-size: 3.5px;
+    }
+
+    .header-background {
+        height: 80rem;
+    }
+}
+
+@media only screen and (min-width: 730px) and (orientation: landscape) {
+    html {
+        font-size: 4px;
+    }
+
+    .header-background {
+        height: 80rem;
+    }
+}
+
+@media only screen and (min-width: 850px) and (orientation: landscape) {
+    html {
+        font-size: 4.5px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media only screen and (min-width: 1300px) and (orientation: landscape) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (min-width: 1920px) and (orientation: landscape) {
+    html {
+        font-size: 10px;
+    }
+
+    .header-background {
+        height: 80rem;
+    }
+}
+
+@media only screen and (min-width: 2500px) and (orientation: landscape) {
+    html {
+        font-size: 13px;
+    }
+
+    .header-background {
+        height: 80rem;
+    }
+}
+
+@media (min-aspect-ratio: 17/9) {
+    .header-background {
+        height: 80rem;
+        top: -10rem;
+    }
+
+    .block-about .text {
+        bottom: 6rem;
+        top: unset;
+        width: 161.4rem;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .block-header {
+        padding-top: 3rem !important;
+    }
+
+    .table {
+        top: 60%;
+    }
+
+    .cell {
+        padding: 3rem;
+    }
+
+    .description {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+    }
 }

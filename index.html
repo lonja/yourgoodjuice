@@ -4,68 +4,33 @@
     <meta charset="UTF-8">
     <title>Your Good Juice</title>
     <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" media="screen and (orientation: portrait)" href="css/main-portrait.css">
-    <link rel="stylesheet" media="screen and (max-width: 1920px) and (orientation: landscape)" href="css/1080p.css">
-    <link rel="stylesheet" media="screen and (max-width: 1080px) and (orientation: portrait)" href="css/1080p.css">
-    <link rel="stylesheet" media="screen and (max-width: 568px) and (orientation: landscape)" href="css/320p.css">
-    <link rel="stylesheet" media="screen and (max-width: 320px) and (orientation: portrait)" href="css/320p.css">
-    <link rel="stylesheet" media="screen and (max-width: 667px) and (orientation: landscape)" href="css/375p.css">
-    <link rel="stylesheet" media="screen and (max-width: 375px) and (orientation: portrait)" href="css/375p.css">
-    <link rel="stylesheet" media="screen and (max-width: 736px) and (orientation: landscape)" href="css/414p.css">
-    <link rel="stylesheet" media="screen and (max-width: 414px) and (orientation: portrait)" href="css/414p.css">
-    <link rel="stylesheet" media="screen and (max-width: 800px) and (orientation: landscape)" href="css/600p.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px) and (orientation: portrait)" href="css/600p.css">
-    <link rel="stylesheet" media="screen and (max-width: 1024px) and (orientation: landscape)" href="css/720p.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px) and (orientation: portrait)" href="css/720p.css">
-    <link rel="stylesheet" media="screen and (max-width: 1366px) and (orientation: landscape)" href="css/800p.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
 <script>
-    var $root = $('html, body');
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
 
-    $('a[href^="#"]').click(function () {
-        var href = $.attr(this, 'href');
-
-        $root.animate({
-            scrollTop: $(href).offset().top
-        }, 500, function () {
-            window.location.hash = href;
-        });
-
-        return false;
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
     });
-
-    // function smoothScroll(event) {
-    //     event.preventDefault();
-    //     $root.animate({
-    //         scrollTop: $(event.target.getAttribute('href')).offset().top
-    //     }, 500);
-    //     return false;
-    // }
-
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //     console.log('ебал твой рот');
-    //     anchor.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-    //             behavior: 'smooth'
-    //         });
-    //     });
-    // });
 </script>
 
 <body>
-<header class="color-background-light color-block-description-light">
+<header id="header" class="color-background-light color-block-description-light">
     <div class="header-background">
-        <div class="header">
-            <img class="logo" src="http://localhost:63343/yourgoodjuice/img/logo.svg"/>
-            <a href="#liquids">Жидкости</a>
-            <a href="#workwithus">Работа с нами</a>
-            <a href="#contacts">Контакты</a>
-            <!--<a class="language-switch" onclick="smoothScroll(event)">RU</a>-->
-        </div>
+
+    </div>
+    <div class="header">
+        <img class="logo" src="img/logo.svg"/>
+        <a href="#liquids">Жидкости</a>
+        <a href="#workwithus">Работа с нами</a>
+        <a href="#contacts">Контакты</a>
+        <!--<a class="language-switch" onclick="smoothScroll(event)">RU</a>-->
     </div>
 </header>
 <div class="block block-about color-background-light">
@@ -90,10 +55,10 @@
             просто поробовать!
         </div>
     </div>
-    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/pineapple-bottle.png">
+    <img class="liquid-img inline" src="img/pineapple-bottle.png">
 </div>
 <div class="block block-peach color-background-light">
-    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/peach-bottle.png">
+    <img class="liquid-img inline" src="img/peach-bottle.png">
     <div class="text inline">
         <div class="block-header color-block-header">
             Peach Milkshake
@@ -113,16 +78,16 @@
             парения.
         </div>
     </div>
-    <img class="liquid-img inline" src="http://localhost:63343/yourgoodjuice/img/lemon-bottle.png">
+    <img class="liquid-img inline" src="img/lemon-bottle.png">
 </div>
 <div id="workwithus" class="block block-work-with-us color-background-light">
     <div class="block-header color-block-header">
-        Преимущества работы с нами:
+        Преимущества работы с нами
     </div>
     <div class="table">
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/sale.svg"/>
+                <img class="work-with-us-icon" src="img/sale.svg"/>
             </div>
             <div class="description">
                 Скидка на превый заказ
@@ -130,7 +95,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/delivery.svg"/>
+                <img class="work-with-us-icon" src="img/delivery.svg"/>
             </div>
             <div class="description">
                 Бесплатная доставка
@@ -138,7 +103,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/map.svg"/>
+                <img class="work-with-us-icon" src="img/map.svg"/>
             </div>
             <div class="description">
                 Предоставление карты вкусов
@@ -146,7 +111,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/bottles.svg"/>
+                <img class="work-with-us-icon" src="img/bottles.svg"/>
             </div>
             <div class="description">
                 Бесплатные пробники
@@ -154,7 +119,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/message.png"/>
+                <img class="work-with-us-icon" src="img/message.svg"/>
             </div>
             <div class="description">
                 Общение с нами в любом удобном мессенджере
@@ -162,7 +127,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon-vertical" src="http://localhost:63343/yourgoodjuice/img/person.svg"/>
+                <img class="work-with-us-icon-vertical" src="img/person.svg"/>
             </div>
             <div class="description">
                 Прислушиваемся к вашим отзывам
@@ -170,7 +135,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/question.png"/>
+                <img class="work-with-us-icon" src="img/question.svg"/>
             </div>
             <div class="description">
                 Быстрые ответы на ваши вопросы
@@ -178,7 +143,7 @@
         </div>
         <div class="cell">
             <div class="icon-wrapper">
-                <img class="work-with-us-icon" src="http://localhost:63343/yourgoodjuice/img/content.svg"/>
+                <img class="work-with-us-icon" src="img/content.svg"/>
             </div>
             <div class="description">
                 Предоставление контента на вашу платформу продаж
@@ -189,19 +154,21 @@
 <footer id="contacts" class="color-background-dark color-block-description-light">
     <div class="footer">
         <div class="footer-inline footer-logos">
-            <img class="footer-logo" src="http://localhost:63343/yourgoodjuice/img/logo.svg">
-            <img class="footer-cooked" src="http://localhost:63343/yourgoodjuice/img/cooked.svg">
+            <a href="#header">
+                <img class="footer-logo" src="img/logo.svg">
+                <img class="footer-cooked" src="img/cooked.svg">
+            </a>
         </div>
         <div class="footer-inline">
             <div class="footer-social">
                 <a href="https://vk.com/yourgoodjuice" class="footer-inline">
-                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/vk.svg">
+                    <img class="footer-icon" src="img/vk.svg">
                 </a>
                 <a href="https://t.me/yourgoodjuice" class="footer-inline">
-                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/telegram.svg">
+                    <img class="footer-icon" src="img/telegram.svg">
                 </a>
                 <a href="https://instagram.com/yourgoodjuice" class="footer-inline">
-                    <img class="footer-icon" src="http://localhost:63343/yourgoodjuice/img/instagram.svg">
+                    <img class="footer-icon" src="img/instagram.svg">
                 </a>
             </div>
             <div>
